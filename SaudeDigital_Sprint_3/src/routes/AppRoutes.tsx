@@ -13,8 +13,8 @@ import Contato from "../pages/Contato";
 import Reagendar from "../pages/Reagendar";
 import Cancelar from "../pages/Cancelar";
 import Lembretes from "../pages/Lembretes";
-import Medicos from "../pages/Medicos"
-import CriarLembrete from "../pages/CriarLembretes";
+import Medicos from "../pages/Medico"
+import CriarLembrete from "../pages/CriarLembrete";
 import Dependentes from "../pages/Dependente";
 
 export const routes = createBrowserRouter ([
