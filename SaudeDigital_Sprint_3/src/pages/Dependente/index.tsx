@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { api } from "../../types/api";
 import CardParente from "../../components/CardParente";
+import Carregamento from "../../components/Carregamento";
 
 export default function Dependentes() {
   const [dependentes, setDependentes] = useState<any[]>([]);
@@ -106,7 +107,7 @@ export default function Dependentes() {
   if (carregando) {
     return (
       <div className="flex justify-center items-center min-h-screen">
-        <p>Carregando...</p>
+        <Carregamento />
       </div>
     );
   }
