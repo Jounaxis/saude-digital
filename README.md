@@ -1,7 +1,5 @@
 # Saúde Digital - Portal do Paciente
 
-<!-- Substitua com um screenshot real do seu projeto -->
-
 Este é o repositório do projeto **Saúde Digital**, uma plataforma desenvolvida para a Sprint 3 de Front-End. O objetivo é fornecer um portal completo para pacientes, onde eles podem gerenciar suas consultas médicas, acessar o histórico e utilizar serviços de telemedicina de forma simples e intuitiva.
 
 ## ✨ Funcionalidades
@@ -100,14 +98,14 @@ Este projeto foi construído com as seguintes tecnologias e padrões:
 
 ---
 
-## ⚙️ Como Executar o Projeto
+## ⚙️ Como Executar o Projeto (Modo Local/Antigo)
 
-Para rodar este projeto localmente, siga os passos abaixo:
+Este é o procedimento para executar o projeto localmente em seu ambiente de desenvolvimento. Para o **acesso imediato à versão online**, consulte a seção **"🖥️ Visualizando o Projeto"** a seguir.
 
 1.  **Clone o repositório:**
 
     ```bash
-    git clone https://github.com/Ganhadores-do-NEXT-2025/Front_End_Sprint_3.git
+    git clone https://github.com/Jounaxis/saude-digital
     ```
 
 2.  **Navegue até o diretório do projeto:**
@@ -132,6 +130,54 @@ Para rodar este projeto localmente, siga os passos abaixo:
 
 ---
 
+## 🖥️ Visualizando o Projeto
+
+O projeto **Saúde Digital** está em produção e acessível publicamente graças à plataforma **Vercel**. A utilização do Vercel cumpriu um dos requisitos da Sprint, garantindo um processo de **Deployment Contínuo (CD)** e hospedagem otimizada para aplicações Front-End.
+
+### 🌐 Acesso Online (Deploy e Código-Fonte)
+
+Você pode interagir com a aplicação sem a necessidade de rodar comandos localmente, ou inspecionar o código-fonte original:
+
+- **Portal do Paciente (Deploy no Vercel):** [saude-digital-eight.vercel.app](https://saude-digital-eight.vercel.app/)
+- **Repositório GitHub (Código-Fonte):** [github/saude-digital](https://github.com/Jounaxis/saude-digital)
+
+### Por que Vercel?
+
+Vercel é uma plataforma de nuvem projetada especificamente para desenvolvedores Front-End, oferecendo:
+
+1.  **Deploy Contínuo:** Integração direta com o GitHub, garantindo que qualquer *push* para o branch principal acione uma nova *build* e deploy automáticos, mantendo a versão online sempre atualizada.
+2.  **Performance:** Otimização automática para velocidade, incluindo Content Delivery Network (CDN) global, resultando em carregamentos mais rápidos para o usuário final.
+3.  **Ambiente de Desenvolvimento Simplificado:** Facilidade na criação, desenvolvimento e implantação de Single Page Applications (SPAs) como a construída com React e Vite, simplificando o fluxo de trabalho.
+
+---
+
+## ⚙️ Recursos e Integrações da Sprint
+
+Esta sprint exigiu a integração do Front-End com o Back-End e a adoção de boas práticas de desenvolvimento e versionamento.
+
+### 1. Gestão de Versão e Colaboração
+
+O projeto adotou o padrão de versionamento **Git Flow**, garantindo um fluxo de trabalho estruturado e eficiente para a colaboração em equipe:
+
+* **Branches Dedicadas:** Uso de branches `main` (produção), `develop` (integração) e branches de `feature` para o desenvolvimento de novas funcionalidades, isolando o trabalho e garantindo a estabilidade.
+* **Commits Semânticos:** Aplicação de um modelo de commits que descreve claramente o tipo de alteração (*feat*, *fix*, *docs*), facilitando a rastreabilidade do histórico.
+
+### 2. Integração com Back-End (Microserviço)
+
+A aplicação Front-End consome dados e funcionalidades de uma API dedicada:
+
+* **API Back-End em Java:** A lógica de negócios, autenticação e gerenciamento de dados de consultas são fornecidos por uma API desenvolvida utilizando a linguagem **Java**.
+* **Hospedagem no Render:** Esta API Java está publicada e em execução na plataforma **Render**, permitindo que o Front-End (hospedado no Vercel) acesse os serviços de forma remota.
+
+### 3. Banco de Dados e Ferramentas
+
+O sistema de gerenciamento de dados é fundamental para a persistência das informações dos pacientes e consultas:
+
+* **Banco de Dados:** Os dados da aplicação são gerenciados em um banco de dados relacional.
+* **SQL Developer:** O **SQL Developer** foi utilizado como ferramenta principal para o desenvolvimento, manutenção e execução de *queries* na base de dados, garantindo a integridade e a correta manipulação dos esquemas necessários para a API Java.
+
+---
+
 ## 📂 Estrutura do Projeto
 
 O código-fonte está organizado da seguinte maneira dentro da pasta `src`:
@@ -150,8 +196,16 @@ src/
 
 ---
 
-## Video explicativo sobre o projeto
+## 👥 Integrantes  
 
-Abaixo contamos com um vídeo explicativo sobre o projeto postado na plataforma do YouTube.
+- **João Victor Gomes de Souza / RM-560907 / TURMA - 1TDSPW**
+- **Lucas Barranha Giannini / RM-564508 / TURMA - 1TDSPW**
+- **Miguel Henrique de Oliveira Dias / RM-565492 / TURMA - 1TDSPW**
 
-https://youtu.be/eCoVsrdpV3c?si=ftzJ1NGyTKalPGx4
+---
+
+## 📹 Video explicativo sobre o projeto
+
+Abaixo contamos com um vídeo explicativo sobre o projeto:
+
+[Saude digital front-end sprint 4](https://youtu.be/bmhAaUrD8SI?si=wdbmF0AwYr-MJPBG)
