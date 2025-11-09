@@ -5,7 +5,7 @@ export default function CriarLembrete() {
   const [form, setForm] = useState({
     mensagem: "",
     dataEnvio: "",
-    codigoParente: 1 
+    codigoParente: "" 
   });
 
   const [carregando, setCarregando] = useState(false);
@@ -18,8 +18,13 @@ export default function CriarLembrete() {
     setCarregando(true);
 
     try {
-      await api.createLembrete(form);
-      setForm({ mensagem: "", dataEnvio: "", codigoParente: form.codigoParente }); 
+      await api.createLembrete({
+        ...form,
+        codigoParente: Number(form.codigoParente), 
+      });
+
+      setForm({ mensagem: "", dataEnvio: "", codigoParente: form.codigoParente 
+      }); 
     } finally {
       setCarregando(false);
     }
@@ -37,6 +42,19 @@ export default function CriarLembrete() {
 
       <section>
         <form className="cartao_autenticacao" onSubmit={criarLembrete}>
+          
+          {/* Campo código do parente */}
+          <div className="campo_formulario">
+            <label>Código do Parente:</label>
+            <input
+              type="number"
+              value={form.codigoParente}
+              onChange={(e) =>
+                setForm({ ...form, codigoParente: e.target.value })
+              }
+              placeholder="Digite o código do parente"
+            />
+          </div>
 
           <div className="campo_formulario">
             <label>Mensagem:</label>
@@ -44,6 +62,7 @@ export default function CriarLembrete() {
               type="text"
               value={form.mensagem}
               onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
+              placeholder="Digite a mensagem do lembrete"
             />
           </div>
 
@@ -67,6 +86,6 @@ export default function CriarLembrete() {
         </form>
       </section>
 
-    </main>
-  );
+    </main>
+  );
 }
